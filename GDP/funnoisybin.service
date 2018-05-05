@@ -1,0 +1,12 @@
+[Unit]
+Description=Fun Noisy Bin
+After=graphical.target
+Requires=graphical.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/Raspi_code.py
+Restart=on-abort
+ 
+[Install]
+WantedBy=multi-user.target
